@@ -58,16 +58,14 @@ function serve(cb) {
 function watch() {
 	gulpWatch('src/**/*.html', series(views))
 	gulpWatch('src/assets/**/*.scss', series(styles))
-	gulpWatch('src/app.js', series(scripts))
 	gulpWatch(['src/assets/**/*.png', 'src/assets/**/*.svg'], series(assets))
 }
 
-const build = parallel(views, styles, scripts, assets)
+const build = parallel(views, styles, assets)
 const dev = series(build, serve, watch)
 
 exports.views = views
 exports.styles = styles
-exports.scripts = scripts
 exports.assets = assets
 exports.serve = serve
 exports.watch = watch
