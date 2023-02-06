@@ -1,0 +1,130 @@
+.main {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding: 3rem $biggest-gap;
+
+	&__box {
+		width: 360px;
+		margin-bottom: $big-gap;
+	}
+
+	&__box_image {
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__box_post {
+		display: flex;
+		flex-direction: column;
+
+		.post_title {
+			padding-top: $medium-gap;
+			font-family: 'Roboto', sans-serif;
+			font-style: normal;
+			font-weight: 700;
+			font-size: $small-font-size;
+			line-height: $small-font-size;
+			color: $red-color;
+		}
+
+		.post_content {
+			padding-top: $medium-gap;
+			font-family: 'Roboto', sans-serif;
+			font-style: normal;
+			font-weight: 700;
+			font-size: $big-font-size;
+			line-height: $big-gap;
+			color: $dark-color;
+		}
+
+		.post_details {
+			padding-top: $medium-gap;
+			display: flex;
+			font-family: 'Roboto', sans-serif;
+			font-style: normal;
+
+			.name {
+				font-weight: 500;
+				font-size: $smallest-font-size;
+				line-height: $smallest-font-size;
+				color: $dark-color;
+			}
+
+			.date {
+				position: relative;
+				z-index: -1;
+				margin: 0 $smallest-gap;
+				font-weight: 400;
+				font-size: $smallest-font-size;
+				line-height: $smallest-font-size;
+				color: $light-dark;
+
+				&::after {
+					content: "";
+					position: absolute;
+					width: 3px;
+					height: 3px;
+					left: calc(50% - 3px/2 + 39px);
+					top: calc(50% - 3px/2 - 0.5px);
+					background: #D7D7D7;
+					border-radius: 100%;
+				}
+
+				&::before {
+					content: "";
+					position: absolute;
+					width: 3px;
+					height: 3px;
+					right: calc(50% - 3px/2 + 37px);
+					top: calc(50% - 3px/2 - 0.5px);
+					background: #d7d7d7;
+					border-radius: 100%;
+				}
+			}
+
+			.views {
+				font-weight: 400;
+				font-size: $smallest-font-size;
+				line-height: $smallest-font-size;
+				color: $light-dark;
+			}
+		}
+
+		.post_text {
+			padding-top: $medium-gap;
+			font-family: 'Roboto', sans-serif;
+			font-style: normal;
+			font-weight: 400;
+			font-size: $med-font-size;
+			line-height: $medium-gap;
+			color: $main-accent;
+		}
+	}
+}
+
+@media (min-width: 960px) and (max-width: 1490px) {
+	.main {
+		justify-content: space-between;
+		padding: 3rem $medium-gap;
+
+		&__box {
+			width: 48%;
+			margin-bottom: $medium-gap;
+		}
+	}
+}
+
+@media (min-width: 320px) and (max-width:960px) {
+	.main {
+		justify-content: center;
+		padding: $medium-gap;
+
+		&__box {
+			width: 100%;
+		}
+	}
+}

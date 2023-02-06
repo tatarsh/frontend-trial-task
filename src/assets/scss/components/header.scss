@@ -1,0 +1,126 @@
+.header {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 50px;
+	background-color: $main-color;
+	padding: 0 $biggest-gap;
+
+	&__logo_section {
+		display: flex;
+		margin: auto;
+
+		&_logo {
+			cursor: pointer;
+		}
+	}
+
+	&__search_section {
+		display: flex;
+
+		&_search {
+			cursor: pointer;
+		}
+
+	}
+
+	.mobile__menu {
+
+		&_sidebar {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 9;
+			width: 85%;
+			height: 100vh;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			align-items: baseline;
+			align-content: baseline;
+			padding: $medium-gap;
+			background: $main-color;
+			border-right: 1px solid #E9E9E9;
+			opacity: 0;
+			transform: translate(-100%, 0);
+			-webkit-transition: all 0.25s ease-in-out;
+			-moz-transition: all 0.25s ease-in-out;
+			-ms-transition: all 0.25s ease-in-out;
+			-o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+		}
+
+		.open {
+			transform: translate(0, 0);
+			opacity: 1;
+		}
+
+		.close {
+			width: 16.36px;
+			height: 16.36px;
+			margin: auto 0;
+		}
+
+		.nav__item {
+			padding: $small-gap 0;
+			border-top: 1px solid #E9E9E9;
+			position: relative;
+			display: block;
+
+			.nav__link {
+				text-decoration: none;
+				font-family: 'Roboto';
+				font-style: normal;
+				font-weight: 500;
+				font-size: $medium-font-size;
+				line-height: $medium-font-size;
+				color: $dark-color;
+			}
+
+			&:not(:last-of-type):after {
+				content: '';
+				position: absolute;
+				width: 8px;
+				height: 4px;
+				background-image: url(../assets/icons/arrow_down.svg);
+				background-repeat: no-repeat;
+				background-size: auto;
+				background-position: center;
+				top: 50%;
+				margin-left: 5px;
+			}
+		}
+
+		.mobile__nav {
+			flex-basis: 100%;
+			margin-top: $medium-gap;
+		}
+
+		@media (min-width:960px) {
+			display: none;
+		}
+	}
+
+}
+
+@media(min-width: 960px) and (max-width: 1490px) {
+	.header {
+		padding: $medium-gap;
+		height: auto;
+	}
+}
+
+@media (min-width: 320px) and (max-width:960px) {
+	.header {
+		position: sticky;
+		width: 100%;
+		top: 0;
+		padding: 1.25rem;
+		height: auto;
+
+		&__logo_section {
+			margin: 0;
+		}
+	}
+}

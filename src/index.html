@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Test Front-End</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="mobile__menu">
+			<img src="./assets/icons/burger_menu.svg" alt="menu" class="burger_menu" onclick="openMenu()">
+			<nav class="mobile__menu_sidebar" id="menu">
+				<img src="./assets/icons/Logotype-small.svg" alt="logo" class="small-logo">
+				<img src="./assets/icons/close.svg" alt="close" class="close" onclick="closeMenu()">
+				<ul class="mobile__nav">
+					<li class="nav__item">
+						<a href="#" class="nav__link">Demos</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">Post</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">Features</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">Categories</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">Shop</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">Buy Now</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header__logo_section">
+			<img src="./assets/icons/Logotype.svg" alt="logo" class="logo">
+		</div>
+		<div class="header__search_section">
+			<img src="./assets/icons/search.svg" alt="search" class="search">
+		</div>
+	</header>
+
+	<nav class="navbar horizontal">
+		<ul class="nav">
+			<li class="nav__item">
+				<span class="nav__item_name">
+					Demos
+				</span>
+				<ul class="nav__list">
+					<li class="nav__items">
+						<a href="#" class="nav__link">Post Header</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Post Layout</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Share Buttons</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Gallary Post</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Video Post</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="nav__item">
+				<span class="nav__item_name">
+					Post
+				</span>
+				<ul class="nav__list">
+					<li class="nav__items">
+						<a href="#" class="nav__link">Post Header</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Post Layout</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Share Buttons</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Gallary Post</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Video Post</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="nav__item">
+				<span class="nav__item_name">
+					Features
+				</span>
+				<ul class="nav__list">
+					<li class="nav__items">
+						<a href="#" class="nav__link">Post Header</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Post Layout</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Share Buttons</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Gallary Post</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Video Post</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="nav__item">
+				<span class="nav__item_name">
+					Categories
+				</span>
+				<ul class="nav__list">
+					<li class="nav__items">
+						<a href="#" class="nav__link">Post Header</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Post Layout</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Share Buttons</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Gallary Post</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Video Post</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="nav__item">
+				<span class="nav__item_name">
+					Shop
+				</span>
+				<ul class="nav__list">
+					<li class="nav__items">
+						<a href="#" class="nav__link">Post Header</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Post Layout</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Share Buttons</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Gallary Post</a>
+					</li>
+					<li class="nav__items">
+						<a href="#" class="nav__link">Video Post</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="nav__item">
+				<span class="nav__item_name">
+					Buy Now
+				</span>
+			</li>
+		</ul>
+	</nav>
+
+	<main class="main">
+		<div class="main__box">
+			<div class="main__box_image">
+				<img alt="image" src="./assets/images/post-1.png"
+					srcset="./assets/images/post-1.png 335w, ./assets/images/post-1.png 360w"
+					sizes="(min-width: 960px) 335px, 100vw">
+			</div>
+			<div class="main__box_post">
+				<p class="post_title">
+					Lifestyle
+				</p>
+				<p class="post_content">
+					Eat Right For Your Exercise Regime
+				</p>
+				<div class="post_details">
+					<p class="name">Niek Bove</p>
+					<p class="date">April 8, 2018</p>
+					<p class="views">3K Views</p>
+				</div>
+				<p class="post_text">
+					Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner
+					sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+				</p>
+			</div>
+		</div>
+
+		<div class="main__box">
+			<div class="main__box_image">
+				<img alt="image" src="./assets/images/post-2.png"
+					srcset="./assets/images/post-2.png 335w, ./assets/images/post-2.png 360w"
+					sizes="(min-width: 960px) 335px, 100vw">
+			</div>
+			<div class="main__box_post">
+				<p class="post_title">
+					Lifestyle
+				</p>
+				<p class="post_content">
+					Eat Right For Your Exercise Regime
+				</p>
+				<div class="post_details">
+					<p class="name">Niek Bove</p>
+					<p class="date">April 8, 2018</p>
+					<p class="views">3K Views</p>
+				</div>
+				<p class="post_text">
+					Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner
+					sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+				</p>
+			</div>
+		</div>
+
+		<div class="main__box">
+			<div class="main__box_image">
+				<img alt="image" src="./assets/images/post-3.png"
+					srcset="./assets/images/post-3.png 335w, ./assets/images/post-3.png 360w"
+					sizes="(min-width: 960px) 335px, 100vw">
+			</div>
+			<div class="main__box_post">
+				<p class="post_title">
+					Lifestyle
+				</p>
+				<p class="post_content">
+					Eat Right For Your Exercise Regime
+				</p>
+				<div class="post_details">
+					<p class="name">Niek Bove</p>
+					<p class="date">April 8, 2018</p>
+					<p class="views">3K Views</p>
+				</div>
+				<p class="post_text">
+					Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner
+					sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+				</p>
+			</div>
+		</div>
+
+		<div class="main__box">
+			<div class="main__box_image">
+				<img alt="image" src="./assets/images/post-4.png"
+					srcset="./assets/images/post-4.png 335w, ./assets/images/post-4.png 360w"
+					sizes="(min-width: 960px) 335px, 100vw">
+			</div>
+			<div class="main__box_post">
+				<p class="post_title">
+					Lifestyle
+				</p>
+				<p class="post_content">
+					Eat Right For Your Exercise Regime
+				</p>
+				<div class="post_details">
+					<p class="name">Niek Bove</p>
+					<p class="date">April 8, 2018</p>
+					<p class="views">3K Views</p>
+				</div>
+				<p class="post_text">
+					Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner
+					sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+				</p>
+			</div>
+		</div>
+
+		<div class="main__box">
+			<div class="main__box_image">
+				<img alt="image" src="./assets/images/post-5.png"
+					srcset="./assets/images/post-5.png 335w, ./assets/images/post-5.png 360w"
+					sizes="(min-width: 960px) 335px, 100vw">
+			</div>
+			<div class="main__box_post">
+				<p class="post_title">
+					Lifestyle
+				</p>
+				<p class="post_content">
+					Eat Right For Your Exercise Regime
+				</p>
+				<div class="post_details">
+					<p class="name">Niek Bove</p>
+					<p class="date">April 8, 2018</p>
+					<p class="views">3K Views</p>
+				</div>
+				<p class="post_text">
+					Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner
+					sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+				</p>
+			</div>
+		</div>
+
+		<div class="main__box">
+			<div class="main__box_image">
+				<img alt="image" src="./assets/images/post-6.png"
+					srcset="./assets/images/post-6.png 335w, ./assets/images/post-6.png 360w"
+					sizes="(min-width: 960px) 335px, 100vw">
+			</div>
+			<div class="main__box_post">
+				<p class="post_title">
+					Lifestyle
+				</p>
+				<p class="post_content">
+					Eat Right For Your Exercise Regime
+				</p>
+				<div class="post_details">
+					<p class="name">Niek Bove</p>
+					<p class="date">April 8, 2018</p>
+					<p class="views">3K Views</p>
+				</div>
+				<p class="post_text">
+					Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner
+					sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+				</p>
+			</div>
+		</div>
+
+		<div class="main__box">
+			<div class="main__box_image">
+				<img alt="image" src="./assets/images/post-7.png"
+					srcset="./assets/images/post-7.png 335w, ./assets/images/post-7.png 360w"
+					sizes="(min-width: 960px) 335px, 100vw">
+			</div>
+			<div class="main__box_post">
+				<p class="post_title">
+					Lifestyle
+				</p>
+				<p class="post_content">
+					Eat Right For Your Exercise Regime
+				</p>
+				<div class="post_details">
+					<p class="name">Niek Bove</p>
+					<p class="date">April 8, 2018</p>
+					<p class="views">3K Views</p>
+				</div>
+				<p class="post_text">
+					Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner
+					sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+				</p>
+			</div>
+		</div>
+
+		<div class="main__box">
+			<div class="main__box_image">
+				<img alt="image" src="./assets/images/post-8.png"
+					srcset="./assets/images/post-8.png 335w, ./assets/images/post-8.png 360w"
+					sizes="(min-width: 960px) 335px, 100vw">
+			</div>
+			<div class="main__box_post">
+				<p class="post_title">
+					Lifestyle
+				</p>
+				<p class="post_content">
+					Eat Right For Your Exercise Regime
+				</p>
+				<div class="post_details">
+					<p class="name">Niek Bove</p>
+					<p class="date">April 8, 2018</p>
+					<p class="views">3K Views</p>
+				</div>
+				<p class="post_text">
+					Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner
+					sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+				</p>
+			</div>
+		</div>
+
+		<div class="main__box">
+			<div class="main__box_image">
+				<img alt="image" src="./assets/images/post-9.png"
+					srcset="./assets/images/post-9.png 335w, ./assets/images/post-9.png 360w"
+					sizes="(min-width: 960px) 335px, 100vw">
+			</div>
+			<div class="main__box_post">
+				<p class="post_title">
+					Lifestyle
+				</p>
+				<p class="post_content">
+					Eat Right For Your Exercise Regime
+				</p>
+				<div class="post_details">
+					<p class="name">Niek Bove</p>
+					<p class="date">April 8, 2018</p>
+					<p class="views">3K Views</p>
+				</div>
+				<p class="post_text">
+					Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner
+					sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+				</p>
+			</div>
+		</div>
+	</main>
+
+	<script>
+		
+		'use strict';
+
+		function openMenu() {
+			const list = document.getElementById("menu").classList;
+			list.add("open");
+		}
+
+		function closeMenu() {
+            document.getElementById("menu").classList.remove("open");
+		}
+	</script>
+</body>
+
+</html>
